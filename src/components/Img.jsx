@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-const Img = styled.div`
-    background-image: url(${props => props.src});
+const Img = styled.img`
+    src: url('${props => props.src}');
+    width: 20%;
 `;
 
 export default Img;
