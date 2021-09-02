@@ -5,7 +5,6 @@ export const Layout =styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: solid 1px red;
 `;
 
 export const Container = styled.div`
@@ -14,7 +13,6 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: solid 1px blue;
 
     @media only screen and (max-width: 450px) {
         width: 95%;
@@ -41,10 +39,10 @@ export const Container = styled.div`
 
 export const Box = styled.div`
     width: 45%;
-    border: solid 1px yellow;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 5vh;
 
     @media only screen and (max-width: 600px) {
         width: 100%;
@@ -70,14 +68,12 @@ export const Box = styled.div`
 `;
 
 export const Row = styled.div`
-    margin: 3vh 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
 `;
 
 export const RowBetween = styled.div`
-    margin: 3vh 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
