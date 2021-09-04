@@ -6,12 +6,15 @@ export const Button = styled.a`
     font-weight: ${props => props.active ? '550' : '400'};
     border-radius: 5px;
     padding: 2.4vh 2vh;
-    width: 42%;
+  
     border: none;
     text-decoration: none;
     display: flex;
     justify-content: center;
     margin: ${props => props.margin};
+    cursor: pointer;
+    width: 100%;
+    
    
 
 
