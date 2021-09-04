@@ -13,7 +13,7 @@ const Routes = () =>{
             <Route component = {LoginPage} path="/login" exact />
             <Route component = {RegisterPage} path="/register" exact />
             <Route component = {EsqueciASenhaPage} path="/esqueci_a_senha" exact />
-            <Route component = {EmailCadastroPage} path="/email_de_cadastro" exact />
+            <Route component = {EmailCadastroPage} path="/email_de_cadastro" exact  />
         </BrowserRouter>
     )
 }

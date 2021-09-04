@@ -8,11 +8,11 @@ import load from '../images/load.png';
 import Img from '../components/Img';
 import { Button } from '../components/Buttons';
 import {Input} from '../components/Input';
-import {BoxInput, SmallDiv, Icon, IconEye, Small, Load} from '../components/BoxInput';
+import {BoxInput, SmallDiv, Icon, IconEye} from '../components/BoxInput';
 import {Term, TermLink} from '../components/Term';
 import {CheckBox, BoxCheckBox} from '../components/Checkbox';
 
-export default function Login(){
+export default function RegisterPage(){
     const [state1, setState1] = useState(false);
     const [state2, setState2] = useState(false);
     const [classEye1, setClassEye1] = useState('fas fa-eye');
@@ -23,13 +23,13 @@ export default function Login(){
     const [typeInput2, setTypeInput2] = useState('password');
 
     function show_password(id){
-        if(id==1){
+        if(id===1){
             state1 ? setClassEye1('fas fa-eye') : setClassEye1('fas fa-eye-slash');
             state1 ? setColorEye1('#4ECB71') : setColorEye1('rgba(119, 119, 119, 0.6)');
             state1 ? setTypeInput1('password') : setTypeInput1('text'); 
             setState1(!state1);
         }
-        if(id==2){
+        if(id===2){
             state2 ? setClassEye2('fas fa-eye') : setClassEye2('fas fa-eye-slash');
             state2 ? setColorEye2('#4ECB71') : setColorEye2('rgba(119, 119, 119, 0.6)');
             state2 ? setTypeInput2('password') : setTypeInput2('text'); 
@@ -52,7 +52,7 @@ export default function Login(){
                         </RowBetween>
                         <Row>
                             <BoxInput>
-                                <Input placeholder="Seu nome" type='text' />
+                                <Input required placeholder="Seu nome" type='text' />
                                 <Icon className='far fa-user'> </Icon>
                             </BoxInput>
                         </Row>

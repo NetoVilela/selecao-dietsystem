@@ -8,9 +8,9 @@ import load from '../images/load.png';
 import Img from '../components/Img';
 import { Button } from '../components/Buttons';
 import {Input} from '../components/Input';
-import {BoxInput, SmallDiv, Icon, IconEye, Small, Load} from '../components/BoxInput';
+import {BoxInput, SmallDiv, Icon, IconEye, Small} from '../components/BoxInput';
 
-export default function Login(){
+export default function LoginPage(){
     const [state, setState] = useState(false);
     const [classEye, setClassEye] = useState('fas fa-eye');
     const [colorEye, setColorEye] = useState('#4ECB71');
