@@ -8,9 +8,8 @@ import load from '../images/load.png';
 import Img from '../components/Img';
 import { Button } from '../components/Buttons';
 import {Input} from '../components/Input';
-import {BoxInput, SmallDiv, Icon, IconEye, Small, Load} from '../components/BoxInput';
-import {Term, TermLink} from '../components/Term';
-import {CheckBox, BoxCheckBox} from '../components/Checkbox';
+import {BoxInput, Icon, IconEye} from '../components/BoxInput';
+import { Label } from '../components/Label';
 
 export default function Login(){
     const [state1, setState1] = useState(false);
@@ -43,58 +42,32 @@ export default function Login(){
             <Layout>
                 <Container>
                     <Box>
-                        <Row mt='-2vh'>
+                        <Row mt='2vh'>
                             <Img width='30%' src={apple} alt='Logo' />
                         </Row>
-                        <RowBetween>
-                            <Button margin='7vh 0 0 0' active={true} href='/register'>Cadastra-se</Button>
-                            <Button margin='7vh 0 0 0' active={false} href='/login'>Já tenho cadastro</Button>
-                        </RowBetween>
-                        <Row>
-                            <BoxInput>
-                                <Input placeholder="Seu nome" type='text' />
-                                <Icon className='far fa-user'> </Icon>
-                            </BoxInput>
+                        
+                        <Row justifyContent='flex-start' mt='2vh'>
+                            <Label>Crie uma nova senha</Label>
                         </Row>
                         <Row>
                             <BoxInput>
-                                <Input placeholder="Seu número de celular" type='text' />
-                                <Icon className='fas fa-mobile'> </Icon>
-                            </BoxInput>
-                        </Row>
-                        <Row>
-                            <BoxInput>
-                                <Input placeholder="Seu email" type='email' />
-                                <Icon className='far fa-envelope'> </Icon>
-                            </BoxInput>
-                        </Row>
-                        <Row>
-                            <BoxInput>
-                                <Input placeholder="Digite uma senha forte" type={typeInput1} />
+                                <Input placeholder="Digite a sua nova senha" type={typeInput1} />
                                 <Icon className='fas fa-lock'> </Icon>
                                 <IconEye color={colorEye1} onClick={() => show_password(1)} className={classEye1}> </IconEye>
                             </BoxInput>
                         </Row>
                         <Row>
                             <BoxInput>
-                                <Input placeholder="Digite a senha novamente" type={typeInput2} />
+                                <Input placeholder="Confirme a sua nova senha" type={typeInput2} />
                                 <Icon className='fas fa-lock'> </Icon>
                                 <IconEye color={colorEye2} onClick={() => show_password(2)} className={classEye2}> </IconEye>
                             </BoxInput>
                         </Row>
-                        <Row mt='1vh'>
-                            <BoxCheckBox>
-                                <CheckBox type='checkbox' />
-                                <SmallDiv>
-                                    <Term>Declaro que li e concordo com os &nbsp;<TermLink href="/termos_de_uso">termos de uso</TermLink>, e a&nbsp;<TermLink href="/politica_de_privacidade"> política de privacidade</TermLink>.</Term>
-                                </SmallDiv>
-                            </BoxCheckBox>
+                        <Row>
+                            <Button margin='7vh 0 0 0' active={true} href='/login'>Alterar senha</Button>
                         </Row>
                         <Row>
-                            <Button margin='2vh 0 0 0' active={true} href='/login'>Finalizar cadastro</Button>
-                        </Row>
-                        <Row>
-                            <Button margin='1vh 0 0 0' active={true} href='#'>
+                            <Button margin='1vh 0 0 0' active={true} href='#entrar'>
                                 <Img width='10%' src={load} alt='Load' />
                             </Button>
                         </Row>

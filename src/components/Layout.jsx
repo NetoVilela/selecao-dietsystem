@@ -69,8 +69,9 @@ export const Box = styled.div`
 
 export const Row = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: ${props => props.flexDirection ? `${props.flexDirection}` : 'row'};;
+    justify-content: ${props => props.justifyContent ? `${props.justifyContent}` : 'center'};
+    margin-top: ${props => props.mt ? `${props.mt}` : ''};
 `;
 
 export const RowBetween = styled.div`

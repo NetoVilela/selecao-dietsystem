@@ -7,8 +7,11 @@ export const Input = styled.input`
     padding: 2vh;
     outline: none;
     background: rgba(255, 255, 255, 0.65);
-    /* margin: 5vh 0 0 0; */
     padding-left: 7vh;
+    color: #AEAEAE;
+    ::placeholder{
+        color: #CFCFCF;
+    }
 
     :active{
         border: 1px solid #4AD395;
